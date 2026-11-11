@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LookFocus: focus follows your gaze</title>
+  <meta name="description" content="LookFocus is a tiny Mac app that moves your keyboard focus to whichever monitor you look at. No clicking, no hunting for the cursor. $1.99, once.">
+  <meta property="og:title" content="LookFocus: focus follows your gaze">
+  <meta property="og:description" content="Glance at a monitor and keep typing. A $1.99 Mac app that watches where you look, privately, on-device.">
+  <meta property="og:image" content="assets/icon.png">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" id="nav">
+    <a class="brand" href="#top" aria-label="LookFocus home">
+      <img src="assets/icon.png" alt="" width="34" height="34">
+      <span>LookFocus</span>
+    </a>
+    <nav aria-label="Main">
+      <a href="#demo">Demo</a>
+      <a href="#how">How it works</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-small buy-link" href="#pricing">Get it · <span data-price>$1.99</span></a>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot"></span> For Macs with more than one screen</p>
+        <h1 class="hero-title">
+          <span class="line">Your eyes already</span>
+          <span class="line">know where you're</span>
+          <span class="line"><span class="scribble">typing.</span></span>
+        </h1>
+        <p class="lede">LookFocus moves your keyboard focus to whichever monitor you turn to. No clicking first, no hunting for the cursor. Just glance and keep going.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary buy-link" href="#pricing">Get LookFocus · <span data-price>$1.99</span></a>
+          <a class="btn btn-ghost" href="#demo">Try the demo ↓</a>
+        </div>
+        <ul class="meta">
+          <li>macOS 14+</li><li>Apple silicon &amp; Intel</li><li>1.6 MB</li><li>No account</li>
+        </ul>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <div class="face" id="face">
+          <svg viewBox="0 0 320 320" class="face-svg">
+            <defs>
+              <linearGradient id="faceGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#6c5cf8"/><stop offset="1" stop-color="#f26b9e"/>
+              </linearGradient>
+            </defs>
+            <rect x="20" y="20" width="280" height="280" rx="68" fill="url(#faceGrad)"/>
+            <g class="eye" data-eye>
+              <ellipse class="sclera" cx="112" cy="150" rx="52" ry="58" fill="#fff"/>
+              <g class="pupil"><circle cx="112" cy="150" r="24" fill="#21194f"/><circle cx="120" cy="140" r="7" fill="#fff"/></g>
+            </g>
+            <g class="eye" data-eye>
+              <ellipse class="sclera" cx="208" cy="150" rx="52" ry="58" fill="#fff"/>
+              <g class="pupil"><circle cx="208" cy="150" r="24" fill="#21194f"/><circle cx="216" cy="140" r="7" fill="#fff"/></g>
+            </g>
+            <rect class="caret" x="152" y="232" width="16" height="44" rx="8" fill="#fff"/>
+          </svg>
+          <div class="sticker sticker-a">no clicks</div>
+          <div class="sticker sticker-b">100% on-device</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>glance</span><span>✦</span><span>type</span><span>✦</span><span>glance</span><span>✦</span><span>type</span><span>✦</span>
+        <span>no more click-to-focus</span><span>✦</span><span>glance</span><span>✦</span><span>type</span><span>✦</span>
+        <span>glance</span><span>✦</span><span>type</span><span>✦</span><span>no more click-to-focus</span><span>✦</span>
+      </div>
+    </div>
+
+    <!-- CLICK TAX -->
+    <section class="section tax reveal" id="tax">
+      <div class="tax-card">
+        <h2>The click tax</h2>
+        <p>Every time you move to another screen, you click just to tell your Mac where you are. How often do you do that?</p>
+        <label class="slider-label" for="hops">I switch screens about <output id="hopsOut">150</output> times a day</label>
+        <input type="range" id="hops" min="20" max="600" step="10" value="150">
+        <div class="tax-results">
+          <div><strong id="clicksYear">34,500</strong><span>throwaway clicks a year</span></div>
+          <div><strong id="hoursYear">14</strong><span>hours of cursor-hunting</span></div>
+          <div><strong id="perHour">14¢</strong><span>what LookFocus costs per hour it saves you, in year one</span></div>
+        </div>
+        <p class="fineprint">Assumes ~1.5 s to find the pointer and click, over 230 working days.</p>
+      </div>
+    </section>
+
+    <!-- DEMO -->
+    <section class="section demo-section reveal" id="demo">
+      <div class="section-head">
+        <p class="eyebrow">Play with it</p>
+        <h2>Glance at a screen. Keep typing.</h2>
+        <p>Move your mouse over the desk to "look" at a monitor, or switch to your webcam for the real thing. Then start typing: your words land on whichever screen you're facing.</p>
+      </div>
+
+      <div class="demo" id="demoBox">
+        <div class="demo-toolbar">
+          <div class="mode" role="radiogroup" aria-label="Demo input">
+            <button class="chip active" data-mode="mouse" role="radio" aria-checked="true">🖱 Mouse = your gaze</button>
+            <button class="chip" data-mode="camera" role="radio" aria-checked="false">📷 Use my webcam</button>
+          </div>
+          <span class="demo-status" id="demoStatus" aria-live="polite">Hover the desk, then type</span>
+        </div>
+
+        <div class="desk" id="desk" tabindex="0" aria-label="Demo desk with three monitors. Hover to look, then type.">
+          <div class="monitors">
+            <div class="mon" data-i="0"><div class="screen"><div class="titlebar"><i></i><i></i><i></i><span>notes.md</span></div><pre class="editor" data-text="Ideas for the launch&#10;- cute eye mascot&#10;- $1.99, no subscription"></pre></div><div class="stand"></div></div>
+            <div class="mon" data-i="1"><div class="screen"><div class="titlebar"><i></i><i></i><i></i><span>Terminal</span></div><pre class="editor" data-text="~ $ ./release.sh&#10;All tests passed&#10;Built LookFocus-1.0.0.dmg"></pre></div><div class="stand"></div></div>
+            <div class="mon" data-i="2"><div class="screen"><div class="titlebar"><i></i><i></i><i></i><span>Messages</span></div><pre class="editor" data-text="sam: did you ship it?&#10;me: just glanced over&#10;     and typed this :)"></pre></div><div class="stand"></div></div>
+          </div>
+          <div class="gaze-dot" id="gazeDot" aria-hidden="true"></div>
+          <div class="you" aria-hidden="true">
+            <div class="you-head" id="youHead"><span class="you-eye"></span><span class="you-eye"></span></div>
+            <span class="you-label">you</span>
+          </div>
+          <video id="cam" playsinline muted aria-hidden="true"></video>
+        </div>
+        <p class="demo-foot">The demo runs in your browser. With the webcam on, video stays on your device, just like the app.</p>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section how" id="how">
+      <div class="section-head reveal">
+        <p class="eyebrow">Three steps, one minute</p>
+        <h2>How it works</h2>
+      </div>
+      <ol class="steps">
+        <li class="step reveal">
+          <div class="step-art art-dmg" aria-hidden="true">
+            <div class="dmg-app"><img src="assets/icon.png" alt="" width="56" height="56"></div>
+            <div class="dmg-arrow">→</div>
+            <div class="dmg-folder">Applications</div>
+          </div>
+          <h3><span>1</span> Download &amp; drag</h3>
+          <p>Buy once and you get a download link. Open the disk image and drag LookFocus into Applications. That's the whole install.</p>
+        </li>
+        <li class="step reveal">
+          <div class="step-art art-cal" aria-hidden="true">
+            <div class="cal-screen"><i class="cal-dot"></i></div>
+          </div>
+          <h3><span>2</span> Calibrate in seconds</h3>
+          <p>The setup guide asks for camera and Accessibility access, then a dot visits 9 spots on each screen while you follow it.</p>
+        </li>
+        <li class="step reveal">
+          <div class="step-art art-look" aria-hidden="true">
+            <div class="mini-mon"></div><div class="mini-mon on"></div><div class="mini-mon"></div>
+          </div>
+          <h3><span>3</span> Just look</h3>
+          <p>Turn toward a screen and focus moves there. It learns from your clicks, so it keeps getting more accurate.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- SETUP TOUR -->
+    <section class="section tour reveal" id="setup">
+      <div class="section-head">
+        <p class="eyebrow">The setup guide</p>
+        <h2>It walks you through everything</h2>
+        <p>No digging through System Settings blind. Every permission is explained before it's asked for.</p>
+      </div>
+      <div class="tour-box">
+        <div class="tour-tabs" role="tablist" aria-label="Setup steps">
+          <button role="tab" aria-selected="true" data-shot="0">Welcome</button>
+          <button role="tab" aria-selected="false" data-shot="1">Camera</button>
+          <button role="tab" aria-selected="false" data-shot="2">Accessibility</button>
+          <button role="tab" aria-selected="false" data-shot="3">Calibrate</button>
+          <button role="tab" aria-selected="false" data-shot="4">Try it</button>
+          <button role="tab" aria-selected="false" data-shot="5">All set</button>
+        </div>
+        <div class="tour-window">
+          <div class="win-bar"><i></i><i></i><i></i></div>
+          <img id="tourShot" src="assets/setup-0-welcome.png" alt="LookFocus setup guide: Welcome step" width="1080" height="720">
+          <div class="tour-progress"><span id="tourBar"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="section features" id="features">
+      <div class="section-head reveal">
+        <p class="eyebrow">Small app, good manners</p>
+        <h2>It knows when to stay put</h2>
+      </div>
+      <div class="grid">
+        <article class="feat reveal"><b>⌨️</b><h3>Waits while you type</h3><p>Mid-sentence glance at your notes? Focus stays where your words are going.</p></article>
+        <article class="feat reveal"><b>🖱</b><h3>Respects the mouse</h3><p>Using the mouse means you're driving. It sits back until you let go.</p></article>
+        <article class="feat reveal"><b>☕️</b><h3>Ignores the desk</h3><p>Looking at your phone, coffee or keyboard doesn't count as a screen.</p></article>
+        <article class="feat reveal"><b>🎯</b><h3>Learns from clicks</h3><p>Every click quietly fine-tunes where it thinks you're looking.</p></article>
+        <article class="feat reveal"><b>⏸</b><h3>⇧⌘G to pause</h3><p>One shortcut, anywhere. Screen-sharing or presenting? Pause it.</p></article>
+        <article class="feat reveal"><b>💤</b><h3>Sleeps with your Mac</h3><p>The camera turns off when you lock, sleep, or pause.</p></article>
+        <article class="feat reveal"><b>✨</b><h3>A gentle flash</h3><p>A soft glow shows which screen just got focus, so you never wonder.</p></article>
+        <article class="feat reveal"><b>🧩</b><h3>Any arrangement</h3><p>Side by side, stacked, laptop below. Calibration learns your desk.</p></article>
+      </div>
+    </section>
+
+    <!-- PRIVACY -->
+    <section class="privacy" id="privacy">
+      <div class="privacy-inner reveal">
+        <div>
+          <p class="eyebrow light">Privacy</p>
+          <h2>Your face never leaves your Mac.</h2>
+          <ul class="facts">
+            <li>Video is analysed in memory by Apple's on-device Vision framework, then thrown away.</li>
+            <li>Nothing is recorded, saved, or uploaded. The app doesn't use the network at all.</li>
+            <li>No account, no analytics, no tracking.</li>
+            <li>It notices <em>when</em> you press a key, never <em>which</em> key.</li>
+          </ul>
+        </div>
+        <div class="netmeter" role="img" aria-label="Data sent by LookFocus: zero bytes">
+          <span class="nm-label">data sent by LookFocus</span>
+          <span class="nm-value"><span id="netZero">0</span> bytes</span>
+          <span class="nm-sub">since you opened this page… and forever</span>
+          <div class="nm-graph"><span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="section pricing reveal" id="pricing">
+      <div class="section-head">
+        <p class="eyebrow">Pricing</p>
+        <h2>Cheaper than the coffee you're holding</h2>
+      </div>
+      <div class="price-wrap">
+        <div class="price-card" id="priceCard">
+          <div class="price-top">
+            <img src="assets/icon.png" alt="" width="64" height="64">
+            <div><h3>LookFocus</h3><p>One-time purchase · free 1.x updates</p></div>
+          </div>
+          <div class="price"><span class="currency">$</span><span id="priceNum">1.99</span></div>
+          <ul class="checks">
+            <li>Every feature, no tiers</li>
+            <li>Use it on your Macs</li>
+            <li>No subscription, ever</li>
+          </ul>
+          <a class="btn btn-primary btn-block buy-link" id="buyBtn" href="#pricing">Buy &amp; download</a>
+          <p class="mac-note" id="macNote" hidden>👋 Heads up: LookFocus is a Mac app. Send yourself this link for later!</p>
+          <p class="reqs">Requires macOS 14 Sonoma or later, a webcam, and ideally 2+ displays.</p>
+        </div>
+        <div class="vs" aria-hidden="true">
+          <div class="vs-item"><span class="vs-emoji">☕️</span><span>Flat white</span><b>$4.50</b></div>
+          <div class="vs-item win"><img src="assets/icon.png" alt="" width="40" height="40"><span>LookFocus</span><b>$1.99</b></div>
+          <div class="vs-item"><span class="vs-emoji">🖱</span><span>Clicks it saves</span><b>∞</b></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq reveal" id="faq">
+      <div class="section-head"><p class="eyebrow">Questions</p><h2>Good questions</h2></div>
+      <div class="faq-list">
+        <details><summary>Does it work with a single monitor?</summary><p>LookFocus is built for two or more displays: it decides which screen gets the keyboard. With one display there's nothing to switch between.</p></details>
+        <details><summary>Do I need a fancy camera?</summary><p>No. The built-in FaceTime camera or any USB webcam works. It prefers an external webcam if you have one plugged in.</p></details>
+        <details><summary>Why does it need Accessibility permission?</summary><p>macOS only lets an app bring another app's window to the front with Accessibility access. LookFocus uses it for exactly that, plus noticing when you're typing so it can wait.</p></details>
+        <details><summary>Is it accurate?</summary><p>Switching between monitors is reliable after a quick calibration, and it improves as you click around. Glances under about a third of a second are ignored on purpose, so a peek doesn't steal focus.</p></details>
+        <details><summary>Does it slow my Mac down?</summary><p>It analyses a few frames a second with Apple's Vision framework, and the camera switches off whenever you pause, lock, or sleep.</p></details>
+        <details><summary>What about Windows?</summary><p>Mac only for now. If enough people ask, a Windows version might happen.</p></details>
+        <details><summary>Can I get a refund?</summary><p>If it doesn't work on your setup, email within 14 days and you'll get your $1.99 back. No forms, no fuss.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="foot-brand"><img src="assets/icon.png" alt="" width="28" height="28"> LookFocus</div>
+    <p>Made for people with too many screens. © <span id="year">2026</span></p>
+    <nav aria-label="Footer"><a href="#privacy">Privacy</a><a href="#faq">FAQ</a><a id="supportLink" href="#">Support</a></nav>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
