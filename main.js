@@ -4,7 +4,7 @@ const $$ = (s, el = document) => [...el.querySelectorAll(s)];
 const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 /* ---------- Config: price, checkout, support ---------- */
-const price = cfg.price || "1.99";
+const price = cfg.price || "9.90";
 $$("[data-price]").forEach((el) => (el.textContent = `$${price}`));
 $("#priceNum").textContent = price;
 $("#year").textContent = new Date().getFullYear();
@@ -66,7 +66,8 @@ function updateTax() {
   $("#hopsOut").textContent = n;
   $("#clicksYear").textContent = clicks.toLocaleString();
   $("#hoursYear").textContent = hours < 10 ? hours.toFixed(1) : Math.round(hours);
-  $("#perHour").textContent = cents < 1 ? "<1¢" : `${Math.round(cents)}¢`;
+  $("#perHour").textContent =
+    cents < 1 ? "<1¢" : cents < 100 ? `${Math.round(cents)}¢` : `$${(cents / 100).toFixed(2)}`;
 }
 hops.addEventListener("input", updateTax);
 updateTax();

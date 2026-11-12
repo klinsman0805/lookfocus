@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>LookFocus: focus follows your gaze</title>
-  <meta name="description" content="LookFocus is a tiny Mac app that moves your keyboard focus to whichever monitor you look at. No clicking, no hunting for the cursor. $1.99, once.">
+  <meta name="description" content="LookFocus is a tiny Mac app that moves your keyboard focus to whichever monitor you look at. No clicking, no hunting for the cursor. $9.90, once.">
   <meta property="og:title" content="LookFocus: focus follows your gaze">
-  <meta property="og:description" content="Glance at a monitor and keep typing. A $1.99 Mac app that watches where you look, privately, on-device.">
+  <meta property="og:description" content="Glance at a monitor and keep typing. A $9.90 Mac app that watches where you look, privately, on-device.">
   <meta property="og:image" content="assets/icon.png">
   <link rel="icon" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,7 +28,7 @@
       <a href="#privacy">Privacy</a>
       <a href="#faq">FAQ</a>
     </nav>
-    <a class="btn btn-small buy-link" href="#pricing">Get it · <span data-price>$1.99</span></a>
+    <a class="btn btn-small buy-link" href="#pricing">Get it · <span data-price>$9.90</span></a>
   </header>
 
   <main id="main">
@@ -43,7 +43,7 @@
         </h1>
         <p class="lede">LookFocus moves your keyboard focus to whichever monitor you turn to. No clicking first, no hunting for the cursor. Just glance and keep going.</p>
         <div class="cta-row">
-          <a class="btn btn-primary buy-link" href="#pricing">Get LookFocus · <span data-price>$1.99</span></a>
+          <a class="btn btn-primary buy-link" href="#pricing">Get LookFocus · <span data-price>$9.90</span></a>
           <a class="btn btn-ghost" href="#demo">Try the demo ↓</a>
         </div>
         <ul class="meta">
@@ -95,7 +95,7 @@
         <div class="tax-results">
           <div><strong id="clicksYear">34,500</strong><span>throwaway clicks a year</span></div>
           <div><strong id="hoursYear">14</strong><span>hours of cursor-hunting</span></div>
-          <div><strong id="perHour">14¢</strong><span>what LookFocus costs per hour it saves you, in year one</span></div>
+          <div><strong id="perHour">69¢</strong><span>what LookFocus costs per hour it saves you, in year one</span></div>
         </div>
         <p class="fineprint">Assumes ~1.5 s to find the pointer and click, over 230 working days.</p>
       </div>
@@ -120,7 +120,7 @@
 
         <div class="desk" id="desk" tabindex="0" aria-label="Demo desk with three monitors. Hover to look, then type.">
           <div class="monitors">
-            <div class="mon" data-i="0"><div class="screen"><div class="titlebar"><i></i><i></i><i></i><span>notes.md</span></div><pre class="editor" data-text="Ideas for the launch&#10;- cute eye mascot&#10;- $1.99, no subscription"></pre></div><div class="stand"></div></div>
+            <div class="mon" data-i="0"><div class="screen"><div class="titlebar"><i></i><i></i><i></i><span>notes.md</span></div><pre class="editor" data-text="Ideas for the launch&#10;- cute eye mascot&#10;- $9.90, no subscription"></pre></div><div class="stand"></div></div>
             <div class="mon" data-i="1"><div class="screen"><div class="titlebar"><i></i><i></i><i></i><span>Terminal</span></div><pre class="editor" data-text="~ $ ./release.sh&#10;All tests passed&#10;Built LookFocus-1.0.0.dmg"></pre></div><div class="stand"></div></div>
             <div class="mon" data-i="2"><div class="screen"><div class="titlebar"><i></i><i></i><i></i><span>Messages</span></div><pre class="editor" data-text="sam: did you ship it?&#10;me: just glanced over&#10;     and typed this :)"></pre></div><div class="stand"></div></div>
           </div>
@@ -236,7 +236,7 @@
     <section class="section pricing reveal" id="pricing">
       <div class="section-head">
         <p class="eyebrow">Pricing</p>
-        <h2>Cheaper than the coffee you're holding</h2>
+        <h2>Less than the lunch you'll eat at your desk</h2>
       </div>
       <div class="price-wrap">
         <div class="price-card" id="priceCard">
@@ -244,7 +244,7 @@
             <img src="assets/icon.png" alt="" width="64" height="64">
             <div><h3>LookFocus</h3><p>One-time purchase · free 1.x updates</p></div>
           </div>
-          <div class="price"><span class="currency">$</span><span id="priceNum">1.99</span></div>
+          <div class="price"><span class="currency">$</span><span id="priceNum">9.90</span></div>
           <ul class="checks">
             <li>Every feature, no tiers</li>
             <li>Use it on your Macs</li>
@@ -255,8 +255,8 @@
           <p class="reqs">Requires macOS 14 Sonoma or later, a webcam, and ideally 2+ displays.</p>
         </div>
         <div class="vs" aria-hidden="true">
-          <div class="vs-item"><span class="vs-emoji">☕️</span><span>Flat white</span><b>$4.50</b></div>
-          <div class="vs-item win"><img src="assets/icon.png" alt="" width="40" height="40"><span>LookFocus</span><b>$1.99</b></div>
+          <div class="vs-item"><span class="vs-emoji">🥪</span><span>Desk lunch</span><b>$14</b></div>
+          <div class="vs-item win"><img src="assets/icon.png" alt="" width="40" height="40"><span>LookFocus, once</span><b data-price>$9.90</b></div>
           <div class="vs-item"><span class="vs-emoji">🖱</span><span>Clicks it saves</span><b>∞</b></div>
         </div>
       </div>
@@ -272,7 +272,7 @@
         <details><summary>Is it accurate?</summary><p>Switching between monitors is reliable after a quick calibration, and it improves as you click around. Glances under about a third of a second are ignored on purpose, so a peek doesn't steal focus.</p></details>
         <details><summary>Does it slow my Mac down?</summary><p>It analyses a few frames a second with Apple's Vision framework, and the camera switches off whenever you pause, lock, or sleep.</p></details>
         <details><summary>What about Windows?</summary><p>Mac only for now. If enough people ask, a Windows version might happen.</p></details>
-        <details><summary>Can I get a refund?</summary><p>If it doesn't work on your setup, email within 14 days and you'll get your $1.99 back. No forms, no fuss.</p></details>
+        <details><summary>Can I get a refund?</summary><p>If it doesn't work on your setup, email within 14 days and you'll get your money back. No forms, no fuss.</p></details>
       </div>
     </section>
   </main>
